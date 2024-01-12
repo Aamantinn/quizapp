@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Got";
+    src: url("../src/font/Game\ of\ Thrones.ttf");
+  }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+
+  <body
+    class="m-0 bg-secondary flex flex-col justify-center align-middle items-center h-screen bg-slate-100"
+  >
+  
+    <div id="home-screen" class="flex flex-col items-center">
+        <div id="title" class="items-center justify-center text-center flex flex-col">
+            <img src="../src/img/got.png" alt="" class="w-60">
+            <h1  class="uppercase text-primary font-got font-semibold pb-5 text-3xl">Game of Thrones Quiz</h1></div>
+    
+      <label id="username-label" for="username" class="font-semibold">Enter your username:</label>
+      <input
+        type="text"
+        id="username"
+        maxlength="10"
+        class="p-2 w-52 m-2 border-2 border-primary rounded-lg" required
+      />
+    </div>
+    <div class="justify-center align-middle items-center m-0 h-fit">
+      <button
+       
+      id="start-btn"
+        class="p-3 items-center w-52 bg-primary uppercase font-semibold text-white border-0 rounded-lg"
+      >
+        Start Quiz
+      </button>
+    </div>
+    <!-- Add this HTML in your home screen section -->
+    <button
+      id="add-question-btn"
+      onclick="openModal()"
+      class="p-3 w-52 m-2 bg-primary uppercase font-semibold text-white border-0 rounded-lg"
+    >
+      Add Question
+    </button>
+
+    <div
+      id="quiz-container"
+      class="flex flex-col  max-sm:w-11/12 md:w-6/12 rounded-lg shadow-lg bg-white"
+      style="display: none"
+    >
+      <div
+        id="question-container"
+        class="flex flex-col gap-8 p-8"
+        style="display: none"
+      >
+        <h2
+          id="question"
+          class="md:text-3xl sm:text-lg text-left text-primary font-bold mb-4"
+        >
+          Question
+        </h2>
+        <div
+          id="answer-buttons"
+          class="flex-col flex items-start gap-5 "
+        ></div>
+        <div
+          id="progress-bar"
+          class="self-end w-16 text-center font-semibold bottom-3 justify-start  text-primary"
+        ></div>
+      </div>
+      <button
+        id="next-btn"
+        class="p-3 hidden bg-primary uppercase font-semibold text-white border-0 rounded-b-lg"
+      >
+        next
+      </button>
+      <div id="display-answers" class="flex flex-col gap-3 p-8"></div>
+      <div
+        id="result"
+        class="hidden justify-center items-center flex-col gap-8 p-8"
+      >
+      <img src="../src/img/flags.png" alt="gif" class="w-36">
+        <span
+          class="text-4xl text-center text-primary font-bold"
+          id="usernameSuccessMessage"
+        ></span>
+        <span class="text-2xl text-center font-bold"
+          >Your final score is
+          <span id="resultSpan" class="text-3xl font-bold"></span
+        ></span>
+        
+        
+      </div>
+      <div id="answer-restart" class=" flex justify-center gap-4 items-center pb-4">
+        <button
+          id="show-answers-btn"
+          onclick="showAnswers()"
+          class="p-3 bg-primary uppercase font-semibold text-white border-0 rounded-lg"
+        >
+          Answers
+        </button>
+        <button
+          id="restart-btn"
+          class="hidden p-3 bg-primary uppercase font-semibold text-white border-0 rounded-lg"
+        >
+          restart
+        </button>
+      </div>
+    </div>
+    
+<!-- New Question Modal -->
+<div id="questionModal" class=" hidden flex-col w-4/5 max-sm:w-4/5  fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-md">
+    <span class="absolute top-4 right-4 text-gray-500 cursor-pointer" onclick="closeModal()">&times;</span>
+    <label for="newQuestion" class="mb-2 block">New Question:</label>
+    <input type="text" id="newQuestion" class="w-full p-2 mb-4 border-2 border-primary rounded-lg" />
+    
+      
+      <label for="option1">Option 1:</label>
+      <input type="text" id="option1" class="p-2 w-52 m-2 border-2 border-primary rounded-lg" required />
+      <label for="option2" >Option 2:</label>
+      <input type="text" id="option2" class="p-2 w-52 m-2 border-2 border-primary rounded-lg" required/>
+      <label for="option3" >Option 3:</label>
+      <input type="text" id="option3" class="p-2 w-52 m-2 border-2 border-primary rounded-lg" required />
+      <label for="option4">Option 4 (Correct Answer):</label>
+      <input type="text" id="option4"  class="p-2 w-52 m-2 border-2 border-primary rounded-lg" required/>
+    <button onclick="submitNewQuestion()" class="bg-primary text-white px-4 py-2 rounded-lg">Add Question</button>
+  </div>
+  
+
+    
+  
+    <script src="./main.js"></script>
+    <!-- Add this HTML at the bottom of your body tag -->
+  </body>
+</html>

@@ -1,0 +1,38 @@
+# Game of Thrones Quiz
+
+Welcome to the Game of Thrones Quiz! Test your knowledge of the epic fantasy series with this interactive quiz application.
+
+
+## Introduction
+This quiz application is built to challenge your knowledge of the Game of Thrones series. It covers a variety of questions related to the characters, events, and lore of the Seven Kingdoms.
+
+## Features
+- Interactive quiz with multiple-choice questions.
+- Progress bar to track your advancement through the quiz.
+- Display of correct answers and user's performance at the end of the quiz.
+- Ability to restart the quiz and try again.
+- User-friendly interface with a modal for adding new questions.
+
+## Usage
+1. Enter your username in the provided field before starting the quiz or adding a new question.
+2. Open the quiz by clicking the "Start Quiz" button.
+3. Answer each question by selecting the correct option.
+4. Click "Next" to proceed to the next question.
+5. At the end of the quiz, view your score and the correct answers.
+6. Optionally, click "Show Answers" to review your responses.
+7. Restart the quiz to challenge yourself again.
+
+### Adding New Questions
+1. Enter your username in the provided field.
+2. Click on "Add Question" to open the modal.
+3. Provide a new question and options.
+4. Mark the correct option.
+5. Click "Submit" to add the question to the quiz.
+
+Note: Please ensure all fields, including the username, are filled before starting the quiz or adding a new question.
+
+## Author
+Amantin Qamili
+
+## License
+This quiz application is open-source and available under the MIT License. Feel free to use, modify, and share it!
